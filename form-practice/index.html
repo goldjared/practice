@@ -7,225 +7,58 @@
   <title>tst</title>
   <link rel="stylesheet" href="/style.css">
 </head>
-<!-- <form>
-  <fieldset>
-    <legend>Personal details</legend>
-    <ul>
-      <li>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-      </li>
-      <li>
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age">
-      </li>
-    </ul>
-  </field>
 
-  <field>
-    <legend>Comment info</legend>
-    <ul>
-      <li>
-        <label for="comment">Comment:</label>
-        <input type="text" id="comment" name="comment">
-      </li>
-      <li>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-      </li>
-    </ul>
+<form>
+  <p>
+    <label for="search">search: </label>
+    <input id="search" name="search" type="search" />
+  </p>
+  <p>
+    <label for="text">text: </label>
+    <input id="text" name="text" type="text" />
+  </p>
+  <p>
+    <label for="date">date: </label>
+    <input id="date" name="date" type="datetime-local" />
+  </p>
+  <p>
+    <label for="radio">radio: </label>
+    <input id="radio" name="radio" type="radio" />
+  </p>
+  <p>
+    <label for="checkbox">checkbox: </label>
+    <input id="checkbox" name="checkbox" type="checkbox" />
+  </p>
+  <p><input type="submit" value="submit" /></p>
+  <p><input type="button" value="button" /></p>
+</form>
+
+<label><span><input type="checkbox" name="q5" value="true"></span> True</label>
+<label><span><input type="checkbox" name="q5" value="false"></span> False</label>
+<form>
+  <fieldset>
+    <legend>Fruit preferences</legend>
+
+    <p>
+      <label>
+        <input type="checkbox" name="fruit" value="cherry" />
+        I like cherry
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="fruit" value="banana" disabled />
+        I can't like banana
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="fruit" value="strawberry" />
+        I like strawberry
+      </label>
+    </p>
   </fieldset>
 </form>
-
-<form>
-  <ul>
-    <li>
-      <label for="user_id">User ID</label>
-      <input type="text" name="user_id" id="user-id">
-
-    </li>
-    <li>
-      <label for="pwd">Password</label>
-      <input type="text" name="pwd" id="pwd">
-
-    </li>
-    <li>
-      <input type="submit" name="submit" id="submit" value="Login">
-    </li>
-  </ul>
-</form>
- -->
-<!-- <form>
-  <fieldset>
-    <legend>Who is your favorite pony?</legend>
-    <ul>
-      <li>
-        <label for="pinkie">Pinkie Pie</label>
-        <input type="radio" name="pinkie" id="pinkie">
-      </li>
-      <li>
-        <label for="rainbow">Rainbow Dash</label>
-        <input type="radio" name="rainbow" id="rainbow">
-      </li>
-      <li>
-        <label for="twilight">Twilight Sparkle</label>
-        <input type="radio" name="twilight" id="twilight">
-      </li>
-    </ul>
-  </fieldset>
-  <fieldset>
-    <legend>Hotdog preferences</legend>
-    <ul>
-      <li>
-        <label for="vegan">Vegan</label>
-        <input type="checkbox" name="vegan" id="vegan">
-      </li>
-      <li>
-        <label for="onions">Onions</label>
-        <input type="checkbox" name="onions" id="onions">
-      </li>
-      <li>
-        <label for="mustard">Mustard</label>
-        <input type="checkbox" name="mustard" id="mustard">
-      </li>
-    </ul>
-  </fieldset>
-  <button>Submit</button>
-</form>
-<form>
-  <ul>
-    <li>
-      <label for="gallery-img">Choose gallery images to upload</label>
-      <input type="file" name="gallery-img" id="gallery-img" accept="image/png, image/jpeg"multiple>
-    </li>
-  </ul>
-<button>Submit</button>
-</form>
-<ul>
-  <li>
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email">
-  </li>
-  <li>
-    <label for="url">URL:</label>
-    <input type="url" name="url" id="url">
-  </li>
-  <li>
-    <label for="tel">Phone</label>
-    <input type="tel" name="tel" id="tel">
-  </li>
-  <li>
-    <label for="color">color:</label>
-    <input type="color" name="color" id="color">
-  </li>
-  <li>
-    <button>Update preferences</button>
-  </li>
-</ul>
-
-<form>
-  <ul>
-    <li>
-      <label for="max-invite">Select maximum number of invitations</label>
-      <input type="range" name="max-invite" min="1" max="30" id="max-invite" value="10">
-      <output class="invite-output" for="max-invite"></output>
-    </li>
-    <li>
-      <button>Submit</button>
-    </li>
-  </ul>
-</form> -->
-
-
-<!-- <form>
-  <h2>Enter your comment</h2>
-  <ul>
-    <li>
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name">
-    </li>
-    <li>
-      <label for="comment">Comment:</label>
-      <textarea name="comment" id="comment" cols="35" rows="10" maxlength="100"></textarea>
-    </li>
-    <li>
-      <button>Submit comment</button>
-    </li>
-  </ul>
-</form>
-
-
-<form>
-  <ul>
-    <li>
-      <label for="food">Pick your favorite food:</label>
-
-          <select name="food" id="food">
-            <optgroup label="mains">
-              <option value="">Salad</option>
-              <option value="">Curry</option>
-              <option value="">Pizza</option>
-              <option value="">Fajitas</option>
-            </optgroup>
-            <optgroup label="snacks">
-              <option value="">Biscuits</option>
-              <option value="">Crisps</option>
-              <option value="">Fruit</option>
-              <option value="">Breadsticks</option>
-            </optgroup>
-          </select>
-
-    </li>
-    <li>
-      <button>Submit choice</button>
-    </li>
-  </ul>
-</form> -->
-<!-- 
-<form>
-  <ul>
-    <li>
-      <label for="food">Enter your favorite food:</label>
-      <input type="text" name="food" id="food" list="mySuggestion">
-      <datalist id="mySuggestion">
-          <option>Salad</option>
-          <option>Curry</option>
-          <option>Pizza</option>
-          <option>Fajitas</option>
-          <option>Biscuits</option>
-          <option>Crisps</option>
-          <option>Fruit</option>
-          <option>Breadsticks</option>
-        </datalist>  
-    </li>
-    <li>
-      <button>Submit choice</button>
-    </li>
-  </ul>
-</form> -->
-<form>
-  <h1>to: Mozilla</h1>
-
-  <div id="from">
-    <label for="name">from:</label>
-    <input type="text" id="name" name="user_name" />
-  </div>
-
-  <div id="reply">
-    <label for="mail">reply:</label>
-    <input type="email" id="mail" name="user_email" />
-  </div>
-
-  <div id="message">
-    <label for="msg">Your message:</label>
-    <textarea id="msg" name="user_message"></textarea>
-  </div>
-
-  <div class="button">
-    <button type="submit">Send your message</button>
-  </div>
-</form>
-
     
 </body>
 </html>
