@@ -55,7 +55,7 @@
   </ul>
 </form>
 
-<form>
+<!-- <form>
   <fieldset>
     <legend>Who is your favorite pony?</legend>
     <ul>
@@ -134,6 +134,75 @@
       <button>Submit</button>
     </li>
   </ul>
+</form> -->
+
+
+<!-- <form>
+  <h2>Enter your comment</h2>
+  <ul>
+    <li>
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name">
+    </li>
+    <li>
+      <label for="comment">Comment:</label>
+      <textarea name="comment" id="comment" cols="35" rows="10" maxlength="100"></textarea>
+    </li>
+    <li>
+      <button>Submit comment</button>
+    </li>
+  </ul>
 </form>
+
+
+<form>
+  <ul>
+    <li>
+      <label for="food">Pick your favorite food:</label>
+
+          <select name="food" id="food">
+            <optgroup label="mains">
+              <option value="">Salad</option>
+              <option value="">Curry</option>
+              <option value="">Pizza</option>
+              <option value="">Fajitas</option>
+            </optgroup>
+            <optgroup label="snacks">
+              <option value="">Biscuits</option>
+              <option value="">Crisps</option>
+              <option value="">Fruit</option>
+              <option value="">Breadsticks</option>
+            </optgroup>
+          </select>
+
+    </li>
+    <li>
+      <button>Submit choice</button>
+    </li>
+  </ul>
+</form> -->
+
+<form>
+  <ul>
+    <li>
+      <label for="food">Enter your favorite food:</label>
+      <input type="text" name="food" id="food" list="mySuggestion">
+      <datalist id="mySuggestion">
+          <option>Salad</option>
+          <option>Curry</option>
+          <option>Pizza</option>
+          <option>Fajitas</option>
+          <option>Biscuits</option>
+          <option>Crisps</option>
+          <option>Fruit</option>
+          <option>Breadsticks</option>
+        </datalist>  
+    </li>
+    <li>
+      <button>Submit choice</button>
+    </li>
+  </ul>
+</form>
+    
 </body>
 </html>
