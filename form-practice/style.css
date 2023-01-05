@@ -1,132 +1,51 @@
 html {
     font-family: sans-serif;
     background: rgb(93, 93, 93);
-  }
-
-fieldset {
-  border: 1px solid #000;
 }
 
-legend {
-  background-color: #fff;
-  margin: 0;
+/* input {
+  appearance: none;
+} */
+
+span {
+  display: inline-block;
+  background: red;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+input[type="checkbox"] {
+  width: 100px;
+  height: 100px;
 }
-
-label, input {
-  display: flex;
-  flex-direction: column;
+input[type="checkbox"] {
+  appearance: none;
 }
-
-@font-face {
-  font-family: "handwriting";
-  src: url("fonts/journal-webfont.woff2") format("woff2"), url("fonts/journal-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "typewriter";
-  src: url("fonts/momot___-webfont.woff2") format("woff2"), url("fonts/momot___-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-body {
-  font: 1.3rem sans-serif;
-  padding: 0.5em;
-  margin: 0;
-  background: #222;
-}
-
-form {
+input[type="checkbox"] {
   position: relative;
-  width: 740px;
-  height: 498px;
-  margin: 0 auto;
-  padding: 1em;
-  box-sizing: border-box;
-  background: #fff url(/images/postcardmdn-bg.jpg);
-
-  /* we create our grid */
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 10em 1em 1em 1em;
+  width: 1em;
+  height: 1em;
+  border: 1px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
 }
 
-h1 {
-  font: 1em "typewriter", monospace;
-  align-self: end;
+input[type="checkbox"]::before {
+  content: "X";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
 }
 
-#message {
-  grid-row: 1 / 5;
+input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
 }
 
-#from,
-#reply {
-  display: flex;
-}
-
-label {
-  font: 0.8em "typewriter", sans-serif;
-}
-
-input,
-textarea {
-  font: 1.4em/1.5em "handwriting", cursive, sans-serif;
-  border: none;
-  padding: 0 10px;
-  margin: 0;
-  width: 80%;
-  background: none;
-}
-
-input:focus,
-textarea:focus {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-
-textarea {
-  display: block;
-
-  padding: 10px;
-  margin: 10px 0 0 -10px;
-  width: 100%;
-  height: 90%;
-
-  border-right: 1px solid;
-
-  /* resize  : none; */
-  overflow: auto;
-}
-
-button {
-  padding: 5px;
-  font: bold 0.6em sans-serif;
-  border: 2px solid #333;
-  border-radius: 5px;
-  background: none;
-  cursor: pointer;
-  transform: rotate(-1.5deg);
-}
-
-button:after {
-  content: " >>>";
-}
-
-button:hover,
-button:focus {
-  outline: none;
-  background: #000;
-  color: #fff;
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background: #ddd;
+  color: gray;
 }
