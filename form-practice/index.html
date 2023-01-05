@@ -7,25 +7,35 @@
   <title>tst</title>
   <link rel="stylesheet" href="/style.css">
 </head>
-<form action="/my-handling-form-page" method="post">
+<form>
+  <fieldset>
+    <legend>Personal details</legend>
     <ul>
-        <li>
-          <label for="name">Name:</label>
-          <input type="text" name="user_name" id="name">
-        </li>
-        <li>
-          <label for="mail">Email:</label>
-          <input type="email" name="user_email" id="mail">
-        </li>
-        <li>
-          <label for="msg">Message:</label>
-          <textarea name="user_message" id="msg"></textarea>
-        </li>
-        <li class="button">
-        <button type="submit">Send your message</button>
-        </li>
-      </ul>
-</form>
+      <li>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      </li>
+      <li>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+      </li>
+    </ul>
+  </field>
 
+  <field>
+    <legend>Comment info</legend>
+    <ul>
+      <li>
+        <label for="comment">Comment:</label>
+        <input type="text" id="comment" name="comment">
+      </li>
+      <li>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      </li>
+    </ul>
+  </fieldset>
+</form>
+    
 </body>
 </html>
