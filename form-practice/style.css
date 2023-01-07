@@ -14,39 +14,47 @@ body {
   box-sizing: border-box;
 }
 
+fieldset {
+  padding: 30px;
+}
+
 button,
 input,
 select {
   font-family: inherit;
   font-size: 100%;
   padding: 0; margin: 0;
-}
-
-
-input[type="search"] {
   appearance: none;
-  height: 25px;
-  width: 300px;
-  border: 1px solid red;
-  border-radius: 5px;
-  padding: 15px orange;
 }
 
-input[type="search"]:hover {
-  background-color: rgb(119, 0, 255);
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-input[type="search"]:focus {
-  padding: 15px orange;
-  border: 1px solid white;
-  
-}
-
-input[type="search"] + div {
+input[type="radio"] {
   position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid pink;
+  border-radius: 25px;
+  vertical-align: -2px;
+  color: green;
+  display: block;
+
 }
 
-input[type="search"]::after + div {
-  content: "spyder";
+input[type="radio"]::after {
   position: absolute;
+  content: "X";
+  font-size: 1.7em;
+  right: 1px;
+  top: -0.15em;
+  visibility: hidden;
+
+}
+
+
+input[type="radio"]:checked::after {
+  visibility: visible;
 }
