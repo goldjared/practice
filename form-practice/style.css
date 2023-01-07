@@ -3,25 +3,50 @@ html {
     background: rgb(93, 93, 93);
 }
 
-input[type="file"] {
-  height: 0;
-  padding: 0;
-  opacity: 0;
+body {
+  color: #333;
+  font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1em;
+  margin: 0;
 }
 
-label[for="file"] {
-  box-shadow: 1px 1px 3px #ccc;
-  background: linear-gradient(to bottom, #eee, #ccc);
-  border: 1px solid rgb(169, 169, 169);
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0; margin: 0;
+}
+
+
+input[type="search"] {
+  appearance: none;
+  height: 25px;
+  width: 300px;
+  border: 1px solid red;
   border-radius: 5px;
-  text-align: center;
-  line-height: 1.5;
+  padding: 15px orange;
 }
 
-label[for="file"]:hover {
-  background: linear-gradient(to bottom, #fff, #ddd);
+input[type="search"]:hover {
+  background-color: rgb(119, 0, 255);
 }
 
-label[for="file"]:active {
-  box-shadow: inset 1px 1px 3px #ccc;
+input[type="search"]:focus {
+  padding: 15px orange;
+  border: 1px solid white;
+  
+}
+
+input[type="search"] + div {
+  position: relative;
+}
+
+input[type="search"]::after + div {
+  content: "spyder";
+  position: absolute;
 }
