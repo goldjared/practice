@@ -14,47 +14,82 @@ body {
   box-sizing: border-box;
 }
 
-fieldset {
-  padding: 30px;
-}
-
 button,
 input,
 select {
   font-family: inherit;
   font-size: 100%;
   padding: 0; margin: 0;
-  appearance: none;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
+fieldset {
+  padding: 10px 30px 0;
+  width: 400px;
 }
 
-input[type="radio"] {
-  position: relative;
-  width: 1.5em;
-  height: 1.5em;
-  border: 1px solid pink;
-  border-radius: 25px;
-  vertical-align: -2px;
-  color: green;
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+button, label, input {
   display: block;
-
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
 }
 
-input[type="radio"]::after {
+input {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+
+input:hover, input:focus {
+  background-color: #eee;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input + span {
+  position: relative;
+}
+
+input + span::before {
   position: absolute;
-  content: "X";
-  font-size: 1.7em;
-  right: 1px;
-  top: -0.15em;
-  visibility: hidden;
+  top: 5px;
+  left: 5px;
 
 }
 
+input:invalid + span::before {
+  content: 'X';
+  color: pink;
+}
 
-input[type="radio"]:checked::after {
-  visibility: visible;
+input:valid + span::before {
+  content: "<3";
+  color: green;
+}
+
+input[type='email']:valid + span::before{
+  content: '';
 }
