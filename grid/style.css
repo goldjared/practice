@@ -10,6 +10,7 @@
     [left] 1fr
     [right] 1fr
     [right2] 1fr;
+    grid-template-areas: "top" "toptop";
     grid-auto-rows: 50px;
     gap: 50px 50px;
 }
