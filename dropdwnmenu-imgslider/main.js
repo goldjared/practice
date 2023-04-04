@@ -48,7 +48,7 @@ function createSlider(imgHolder, left, right) {
     }
     function classToggle() {
       let visibleElement = document.querySelector(`#pic${getCurrentImg()}`);
-      // visibleElement.classList.toggle('visible');
+      visibleElement.classList.toggle('visible');
       console.log(getCurrentImg(), 'getter')
       console.log(visibleElement)
     }
