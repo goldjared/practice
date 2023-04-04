@@ -1,0 +1,16 @@
+.menu {
+  background-color: aqua;
+}
+
+.menu-drop {
+  background-color: bisque;
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.drop-item:hover {
+  background-color: yellow;
+}
