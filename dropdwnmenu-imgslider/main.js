@@ -25,10 +25,15 @@ function createSlider(imgHolder, left, right) {
   let currentImg;
   function changeImg() {
     function calcImgId(direction) {
-      if(currentImg === undefined){
-        currentImg = 1;
+      if(currentImg === undefined && direction === 'right'){
+        currentImg = 2;
+        return;
+      } else if(currentImg === undefined && direction === 'left') {
+        currentImg = 8;
         return;
       }
+        
+      
       if(direction === 'right') {
         if(currentImg === 8) {
           currentImg = 1;
