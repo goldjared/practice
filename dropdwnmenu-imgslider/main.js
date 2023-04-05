@@ -51,11 +51,25 @@ function createSlider(imgHolder, left, right) {
     function getCurrentImg() {
       return currentImg;
     }
-    function classToggle() {
+    function classToggle(direction) {
       let visibleElement = document.querySelector(`#pic${getCurrentImg()}`);
-      visibleElement.classList.toggle('visible');
-      console.log(getCurrentImg(), 'getter')
-      console.log(visibleElement)
+
+      let previousElementNum = getCurrentImg() - 1;
+      let nextElementNum = getCurrentImg() + 1;
+
+      if(previousElementNum === 0) { previousElementNum = 8; }
+      if(nextElementNum === 9) { nextElementNum = 1; }
+      
+      if(direction === 'right') {
+        let previousElement = document.querySelector(`#pic${previousElementNum}`)
+        previousElement.classList.toggle('visible');
+    } else {
+        let nextElement = document.querySelector(`#pic${nextElementNum}`)
+        nextElement.classList.toggle('visible');
+      }
+
+      visibleElement.classList.toggle('visible'); 
+
     }
 
 
@@ -65,7 +79,7 @@ function createSlider(imgHolder, left, right) {
   }
   document.querySelector(left).addEventListener('click', () => {
     changeImg().calcImgId('left');
-    changeImg().classToggle();
+    changeImg().classToggle('left');
 
     // console.log(changeImg().getCurrentImg());
     // call image changer with the current IMG, set display to none, prevsibling dispay toggle
@@ -74,7 +88,7 @@ function createSlider(imgHolder, left, right) {
   })
   document.querySelector(right).addEventListener('click', () => {
     changeImg().calcImgId('right');
-    changeImg().classToggle();
+    changeImg().classToggle('right');
 
     // console.log(changeImg().getCurrentImg());
   })
