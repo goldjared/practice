@@ -36,3 +36,11 @@
 .nav-display {  
   background-color: #fff;
 }
+
+.image {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
