@@ -3,4 +3,11 @@ function capitalize(string) {
   let slicedString = string.slice(1)
   return firstLetter + slicedString;
 }
-module.exports = capitalize; 
+
+function reverseString(string) {
+  let stringArr = string.split('');
+  let reverseArr = stringArr.reverse();
+  return reverseArr.join('');
+}
+
+module.exports = { capitalize, reverseString } 
