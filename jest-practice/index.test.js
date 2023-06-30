@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator, ceasarCipher } from './index';
+import { capitalize, reverseString, calculator, ceasarCipher, analyzeArray } from './index';
 
 // test('first letter should be capital', () => {
 //   expect(capitalize('test')).toBe('Test');
@@ -37,3 +37,8 @@ import { capitalize, reverseString, calculator, ceasarCipher } from './index';
   // test('ceasar cypher shift 1, test puncuation', () => {
   //   expect(ceasarCipher('KITTEN', 1)).toBe('ljuufo')
   // });
+  test('analyze array average', () => {
+    expect(analyzeArray([4,2,5,1,6])).toEqual({average: 3.6})
+  })
+
+  
