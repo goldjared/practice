@@ -36,6 +36,16 @@ function ceasarCipher(text, keyVal) {
   return cypheredWord.join('');
 }
 
-console.log(ceasarCipher('kitten', 1));
+function analyzeArray(array) {
+  let sum = 0;
+  for(let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  let averageVal = sum / array.length;
 
-module.exports = { capitalize, reverseString, calculator, ceasarCipher } 
+  return {
+    average: averageVal
+  }
+}
+console.log(analyzeArray([1,2,3,4]));
+module.exports = { capitalize, reverseString, calculator, ceasarCipher, analyzeArray } 
