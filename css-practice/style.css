@@ -1,0 +1,44 @@
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  animation: 2s ease-in 1s tester infinite;
+}
+
+@keyframes tester {
+  0% {
+    background-color: pink;
+  }
+
+  50% {
+    background-color: gray;
+  }
+
+  100% {
+    background-color: aqua;
+  }
+}
+
+.spider {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
