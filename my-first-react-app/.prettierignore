@@ -1,0 +1,6 @@
+node_modules
+public
+.eslintric.cjs
+package-lock.json
+package.json
+vite.config.js
